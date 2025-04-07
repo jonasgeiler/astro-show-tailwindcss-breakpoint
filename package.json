@@ -1,0 +1,22 @@
+{
+  "name": "astro-tailwind-breakpoints",
+  "type": "module",
+  "version": "0.0.1",
+  "peerDependencies": {
+    "astro": "^4.6.1"
+  },
+  "scripts": {
+    "build": "tsc",
+    "dev": "tsc --watch",
+    "prepublish": "npm run build"
+  },
+  "exports": {
+    ".": "./dist/integration.js",
+    "./app": "./dist/app.js"
+  },
+  "devDependencies": {
+    "@types/node": "^18.17.8",
+    "astro": "^5.6.1"
+  },
+  "packageManager": "pnpm@9.15.6+sha512.139cab068fdf0b751268179ac5f909b5be72afb4a75c513d1905d151befc8977b593d3cf8671ed83d4d6637c5c94b98ffbce108125de4a5a27a31233601a99de"
+}
