@@ -7,6 +7,8 @@
 - **Small** - No dependencies!
 - **Fast** - No client-side JavaScript, only an SVG icon!
 
+![Screenshot of an Astro dev toolbar using this integration](./.github/assets/toolbar.png)
+
 ```typescript
 import { defineConfig } from "astro/config";
 import showTailwindCSSBreakpoint from "astro-show-tailwindcss-breakpoint";
@@ -26,8 +28,6 @@ export default defineConfig({
   ],
 });
 ```
-
-![Screenshot of an Astro dev toolbar using this integration](./.github/assets/toolbar.png)
 
 ## Installation
 
