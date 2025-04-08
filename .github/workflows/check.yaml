@@ -55,8 +55,8 @@ on:
   workflow_call:
 
 jobs:
-  lint:
-    name: Lint
+  check:
+    name: Check
     runs-on: ubuntu-latest
     defaults:
       run:
@@ -89,7 +89,7 @@ jobs:
               - '**.{sh,bash,mksh,bats,zsh}'
               - .githooks/*
 
-      - name: Lint GitHub Actions workflows using actionlint
+      - name: Check GitHub Actions workflows using actionlint
         if: |
           github.event_name == 'workflow_dispatch' ||
           steps.changed-files.outputs.actionlint_any_changed == 'true'
@@ -134,7 +134,7 @@ jobs:
           # Run actionlint.
           ./actionlint -verbose -color "${files[@]}"
 
-      - name: Lint shell scripts and git hooks using shellcheck
+      - name: Check shell scripts and git hooks using shellcheck
         if: |
           github.event_name == 'workflow_dispatch' ||
           steps.changed-files.outputs.shellcheck_any_changed == 'true'
@@ -203,13 +203,13 @@ jobs:
           steps.changed-files.outputs.pnpm_any_changed == 'true'
         run: pnpm install
 
-      - name: Run check using pnpm
+      - name: Check JavaScript/TypeScript scripts using pnpm
         if: |
           github.event_name == 'workflow_dispatch' ||
           steps.changed-files.outputs.pnpm_any_changed == 'true'
         run: pnpm run check
 
-      - name: Run build using pnpm
+      - name: Test build using pnpm
         if: |
           github.event_name == 'workflow_dispatch' ||
           steps.changed-files.outputs.pnpm_any_changed == 'true'
