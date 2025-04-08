@@ -17,13 +17,13 @@ Inside of your Astro project, you'll see the following folders and files:
 ```text
 /
 ├── app.ts
-├── integration.ts
+├── index.ts
 └── package.json
 ```
 
 The logic of your app is in the appropriately named `app.ts` file. This is where the vast majority of your toolbar app logic will live.
 
-The `integration.ts` file is a simple Astro integration file that will be used to add your app into the toolbar.
+The `index.ts` file is a simple Astro integration file that will be used to add your app into the toolbar.
 
 ## 🧞 Commands
 
