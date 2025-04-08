@@ -75,7 +75,7 @@ jobs:
         with:
           files_yaml: |
             pnpm:
-              - '**.{js,ts}'
+              - '**/*.{js,ts}'
               - .editorconfig
               - biome.json
               - package.json
@@ -86,7 +86,7 @@ jobs:
               - .github/workflows/*.{yml,yaml}
 
             shellcheck:
-              - '**.{sh,bash,mksh,bats,zsh}'
+              - '**/*.{sh,bash,mksh,bats,zsh}'
               - .githooks/*
 
       - name: Check GitHub Actions workflows using actionlint
