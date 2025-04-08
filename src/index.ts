@@ -24,6 +24,7 @@ function sortBreakpoints(
 	[name1, value1]: [string, string | number],
 	[name2, value2]: [string, string | number],
 ): number {
+	// parseFloat() can handle strings with units like "1rem" or "2px".
 	const numValue1 =
 		typeof value1 === "number" ? value1 : Number.parseFloat(value1);
 	if (Number.isNaN(numValue1)) {
