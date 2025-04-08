@@ -143,7 +143,7 @@ function generateIcon(breakpoints: Record<string, string | number>) {
  * @param options The options for the integration.
  * @returns The integration.
  */
-export default function tailwindBreakpoints(
+export default function showTailwindCSSBreakpoint(
 	options: {
 		/**
 		 * Define the Tailwind CSS breakpoints to use.
@@ -164,7 +164,7 @@ export default function tailwindBreakpoints(
 ): AstroIntegration {
 	// API Reference: https://docs.astro.build/en/reference/integrations-reference/
 	return {
-		name: "astro-tailwind-breakpoints",
+		name: "astro-show-tailwindcss-breakpoint",
 		hooks: {
 			"astro:config:setup": ({ addDevToolbarApp }) => {
 				const {
@@ -179,7 +179,7 @@ export default function tailwindBreakpoints(
 				} = options;
 
 				addDevToolbarApp({
-					id: "astro-tailwind-breakpoints-dev-toolbar-app",
+					id: "tailwindcss-breakpoint",
 					name: "Tailwind CSS Breakpoint",
 					icon: generateIcon(breakpoints),
 					entrypoint: fileURLToPath(

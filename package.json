@@ -1,13 +1,13 @@
 {
-  "name": "astro-tailwind-breakpoints",
+  "name": "astro-show-tailwindcss-breakpoint",
   "version": "1.0.0",
   "description": "A dev toolbar app for Astro to show the current Tailwind CSS breakpoint",
-  "homepage": "https://github.com/jonasgeiler/astro-tailwind-breakpoints",
-  "bugs": "https://github.com/jonasgeiler/astro-tailwind-breakpoints/issues",
+  "homepage": "https://github.com/jonasgeiler/astro-show-tailwindcss-breakpoint",
+  "bugs": "https://github.com/jonasgeiler/astro-show-tailwindcss-breakpoint/issues",
   "license": "MIT",
   "author": "Jonas Geiler <npm@jonasgeiler.com> (https://jonasgeiler.com)",
   "funding": "https://github.com/sponsors/jonasgeiler",
-  "repository": "github:jonasgeiler/astro-tailwind-breakpoints",
+  "repository": "github:jonasgeiler/astro-show-tailwindcss-breakpoint",
   "scripts": {
     "dev": "tsc --watch",
     "check": "pnpm run '/^check:.*/'",
