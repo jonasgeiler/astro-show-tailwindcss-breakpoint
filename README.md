@@ -118,11 +118,12 @@ export default defineConfig({
 
 ## Credits
 
-This integration was partly inspired by [astro-breakpoints][astro-breakpoints]
+This integration was partly inspired
+by [astro-devtool-breakpoints][astro-devtool-breakpoints]
 by [Bryan Schuetz (@BryanSchuetz)][@BryanSchuetz].
 
 [astro]: https://astro.build/
 [tailwindcss]: https://tailwindcss.com/
 [tailwindcss-breakpoints]: https://tailwindcss.com/docs/responsive-design#overview
-[astro-breakpoints]: https://github.com/BryanSchuetz/astro-breakpoints
+[astro-devtool-breakpoints]: https://github.com/BryanSchuetz/astro-breakpoints
 [@BryanSchuetz]: https://github.com/BryanSchuetz
