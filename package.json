@@ -2,7 +2,7 @@
   "name": "astro-show-tailwindcss-breakpoint",
   "version": "1.0.1",
   "description": "Show the current Tailwind CSS breakpoint in the Astro dev toolbar!",
-  "homepage": "https://github.com/jonasgeiler/astro-show-tailwindcss-breakpoint",
+  "homepage": "https://github.com/jonasgeiler/astro-show-tailwindcss-breakpoint#readme",
   "bugs": "https://github.com/jonasgeiler/astro-show-tailwindcss-breakpoint/issues",
   "license": "MIT",
   "author": "Jonas Geiler <npm@jonasgeiler.com> (https://jonasgeiler.com)",
@@ -24,7 +24,7 @@
   },
   "packageManager": "pnpm@9.15.6+sha512.139cab068fdf0b751268179ac5f909b5be72afb4a75c513d1905d151befc8977b593d3cf8671ed83d4d6637c5c94b98ffbce108125de4a5a27a31233601a99de",
   "peerDependencies": {
-    "astro": "^4.6.1"
+    "astro": "^5.0.0"
   },
   "devDependencies": {
     "@biomejs/biome": "1.9.4",
