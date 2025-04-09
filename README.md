@@ -7,6 +7,11 @@
 - **Small** - No dependencies!
 - **Fast** - No client-side JavaScript, only an SVG icon!
 
+[![Version](https://img.shields.io/npm/v/astro-show-tailwindcss-breakpoint?style=for-the-badge&label=Version&labelColor=2a2d35&color=f2ebf4)][latest-release]
+[![NPM Downloads](https://img.shields.io/npm/d18m/astro-show-tailwindcss-breakpoint?style=for-the-badge&label=NPM%20Downloads&labelColor=2a2d35&color=e13fa0&cacheSeconds=86400)][package-on-npm]
+[![JSR Score](https://jsr.io/badges/@jonasgeiler/astro-show-tailwindcss-breakpoint/score?style=for-the-badge&label=Score&logoColor=fff&labelColor=2a2d35&color=f2ebf4&cacheSeconds=86400)][package-on-jsr]
+[![npm package minimized gzipped size](https://img.shields.io/bundlejs/size/astro-show-tailwindcss-breakpoint?style=for-the-badge&labelColor=2a2d35&color=e13fa0&cacheSeconds=86400)][package-on-bundlejs]
+
 ![Screenshot of an Astro dev toolbar using this integration](./.github/assets/toolbar.png)
 
 ```typescript
@@ -45,6 +50,10 @@ following two steps:
    ```bash
    npm install --save-dev astro-show-tailwindcss-breakpoint
    ```
+   Or, if you're using Deno, run this in the terminal:
+   ```bash
+   deno add jsr:@jonasgeiler/astro-show-tailwindcss-breakpoint
+   ```
 2. Add the integration to your `astro.config.mjs`/`astro.config.ts` file:
    ```typescript
    import { defineConfig } from "astro/config";
@@ -75,7 +84,7 @@ based on the current viewport width.
 > This is useful if you want to see the breakpoint name while resizing
 > the viewport.
 
-## Custom Breakpoints
+### Custom Breakpoints
 
 You can optionally define custom breakpoints to use in the dev toolbar.  
 By default, the breakpoints are:
@@ -122,8 +131,12 @@ This integration was partly inspired
 by [astro-devtool-breakpoints][astro-devtool-breakpoints]
 by [Bryan Schuetz (@BryanSchuetz)][@BryanSchuetz].
 
-[astro]: https://astro.build/
-[tailwindcss]: https://tailwindcss.com/
-[tailwindcss-breakpoints]: https://tailwindcss.com/docs/responsive-design#overview
-[astro-devtool-breakpoints]: https://github.com/BryanSchuetz/astro-breakpoints
 [@BryanSchuetz]: https://github.com/BryanSchuetz
+[astro-devtool-breakpoints]: https://github.com/BryanSchuetz/astro-breakpoints
+[astro]: https://astro.build/
+[latest-release]: https://github.com/jonasgeiler/astro-show-tailwindcss-breakpoint/releases/latest
+[package-on-bundlejs]: https://bundlejs.com/?q=astro-show-tailwindcss-breakpoint
+[package-on-jsr]: https://jsr.io/@jonasgeiler/astro-show-tailwindcss-breakpoint
+[package-on-npm]: https://www.npmjs.com/package/astro-show-tailwindcss-breakpoint
+[tailwindcss-breakpoints]: https://tailwindcss.com/docs/responsive-design#overview
+[tailwindcss]: https://tailwindcss.com/
