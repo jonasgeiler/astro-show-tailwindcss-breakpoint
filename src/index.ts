@@ -121,7 +121,7 @@ function generateIcon(breakpoints: Record<string, string | number>) {
 		sortedBreakpointsArray
 			.map(
 				([, value], index) =>
-					`@media (width>=${value}){#${generateCSSId(index)}{display:inline}#${index === 0 ? "_" : generateCSSId(index - 1)}{display:none}}`,
+					`@media (width>=${typeof value === "number" ? `${value}px` : value}){#${generateCSSId(index)}{display:inline}#${index === 0 ? "_" : generateCSSId(index - 1)}{display:none}}`,
 			)
 			.join("") +
 		"</style>" +
