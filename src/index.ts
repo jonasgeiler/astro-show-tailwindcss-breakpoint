@@ -1,3 +1,8 @@
+/**
+ * This module contains the Astro integration.
+ * @module
+ */
+
 import { fileURLToPath } from "node:url";
 import type { AstroIntegration } from "astro";
 
