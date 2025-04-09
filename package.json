@@ -1,6 +1,6 @@
 {
   "name": "astro-show-tailwindcss-breakpoint",
-  "version": "1.0.4",
+  "version": "1.0.5",
   "description": "Show the current Tailwind CSS breakpoint in the Astro dev toolbar!",
   "homepage": "https://github.com/jonasgeiler/astro-show-tailwindcss-breakpoint#readme",
   "bugs": "https://github.com/jonasgeiler/astro-show-tailwindcss-breakpoint/issues",
