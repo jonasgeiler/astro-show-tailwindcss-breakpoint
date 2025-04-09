@@ -29,6 +29,7 @@ esbuild-why-*
 
 # Build
 /dist/
+*.tgz
 
 # Scribble Files
 test.[jt]s

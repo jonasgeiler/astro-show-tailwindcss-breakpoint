@@ -52,8 +52,14 @@ jobs:
           NODE_AUTH_TOKEN: ${{ secrets.NPM_ACCESS_TOKEN }}
         run: pnpm publish --provenance --access=public --no-git-checks
 
+      - name: Create tarball for release
+        run: pnpm pack
+
       - name: Draft release on GitHub
         uses: softprops/action-gh-release@e7a8f85e1c67a31e6ed99a94b41bd0b71bbee6b8 # v2.0.9
         with:
           draft: true
           generate_release_notes: true
+          fail_on_unmatched_files: true
+          files: |
+            astro-show-tailwindcss-breakpoint-*.tgz
