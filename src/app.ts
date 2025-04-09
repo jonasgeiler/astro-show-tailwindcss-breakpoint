@@ -1,8 +1,3 @@
-/**
- * This module contains the Astro dev toolbar app.
- * @module
- */
-
 import type { DevToolbarApp } from "astro";
 
 /** The dev toolbar app currently does nothing except for showing an icon. */
