@@ -39,6 +39,13 @@ jobs:
       - name: Install dependencies using pnpm
         run: pnpm install
 
+      - name: Replace GitHub-flavored Markdown alerts with standard Markdown
+        run: sed -i 's/^> *\[\!\([a-zA-Z]\)\([a-zA-Z]*\)\] */> **\U\1\L\2**  /g' ./*.md
+        # Basically replaces:
+        # > [!NOTE]
+        # with:
+        # > **Note**
+
       - name: Publish to npmjs.com
         env:
           NODE_AUTH_TOKEN: ${{ secrets.NPM_ACCESS_TOKEN }}
