@@ -13,7 +13,7 @@
   "formatter": {
     "enabled": true,
     "useEditorconfig": true,
-    "ignore": ["**/package.json", "tsconfig.json"]
+    "ignore": ["**/package.json", "**/jsr.json", "tsconfig.json"]
   },
   "organizeImports": {
     "enabled": true

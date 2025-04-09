@@ -20,7 +20,7 @@ jobs:
         shell: bash
 
     permissions:
-      id-token: write # for NPM provenance establishment
+      id-token: write # for NPM provenance establishment and JSR publish
       contents: write # for GitHub release
 
     steps:
@@ -39,6 +39,9 @@ jobs:
 
       - name: Install dependencies using pnpm
         run: pnpm install
+
+      - name: Publish to jsr.io
+        run: pnpx jsr publish
 
       - name: Replace GitHub-flavored Markdown alerts with standard Markdown
         run: sed -i 's/^> *\[\!\([a-zA-Z]\)\([a-zA-Z]*\)\] */> **\U\1\L\2**  /g' ./*.md
