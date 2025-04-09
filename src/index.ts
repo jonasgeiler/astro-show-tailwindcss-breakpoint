@@ -1,7 +1,7 @@
 import { fileURLToPath } from "node:url";
 import type { AstroIntegration } from "astro";
 
-/** Re-usable error for invalid breakpoints. */
+/** Reusable error for invalid breakpoint values. */
 class InvalidBreakpointValueError extends TypeError {
 	constructor(name: string, value: string | number) {
 		super(
@@ -48,7 +48,7 @@ function sortBreakpoints(
  */
 function generateCSSId(index: number) {
 	// Basically a base-36 number system calculation, but with the first
-	// character not being a number, and also using underscores and dashes.
+	// character not being a numeric, and also using underscores and dashes.
 
 	// biome-ignore lint/style/noNonNullAssertion: Can't be null, 26 is the length of the string.
 	let id = "useandompxbfghjklqvwyzrict"[index % 26]!;

@@ -7,10 +7,10 @@
 - **Small** - No dependencies!
 - **Fast** - No client-side JavaScript, only an SVG icon!
 
-[![Version](https://img.shields.io/npm/v/astro-show-tailwindcss-breakpoint?style=for-the-badge&label=Version&labelColor=2a2d35&color=f2ebf4)][latest-release]
-[![NPM Downloads](https://img.shields.io/npm/d18m/astro-show-tailwindcss-breakpoint?style=for-the-badge&label=NPM%20Downloads&labelColor=2a2d35&color=e13fa0&cacheSeconds=86400)][package-on-npm]
-[![JSR Score](https://jsr.io/badges/@jonasgeiler/astro-show-tailwindcss-breakpoint/score?style=for-the-badge&label=Score&logoColor=fff&labelColor=2a2d35&color=f2ebf4&cacheSeconds=86400)][package-on-jsr]
-[![npm package minimized gzipped size](https://img.shields.io/bundlejs/size/astro-show-tailwindcss-breakpoint?style=for-the-badge&labelColor=2a2d35&color=e13fa0&cacheSeconds=86400)][package-on-bundlejs]
+[![Version badge](https://img.shields.io/npm/v/astro-show-tailwindcss-breakpoint?style=for-the-badge&label=Version&labelColor=2a2d35&color=f2ebf4)][latest-release]
+[![NPM downloads badge](https://img.shields.io/npm/d18m/astro-show-tailwindcss-breakpoint?style=for-the-badge&label=NPM%20Downloads&labelColor=2a2d35&color=e13fa0&cacheSeconds=86400)][package-on-npm]
+[![JSR score badge](https://jsr.io/badges/@jonasgeiler/astro-show-tailwindcss-breakpoint/score?style=for-the-badge&label=Score&logoColor=fff&labelColor=2a2d35&color=f2ebf4&cacheSeconds=86400)][package-on-jsr]
+[![Minified size (gzip) badge](https://img.shields.io/bundlejs/size/astro-show-tailwindcss-breakpoint?style=for-the-badge&labelColor=2a2d35&color=e13fa0&cacheSeconds=86400)][package-on-bundlejs]
 
 ![Screenshot of an Astro dev toolbar using this integration](./.github/assets/toolbar.png)
 
