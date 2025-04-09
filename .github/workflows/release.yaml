@@ -52,7 +52,7 @@ jobs:
           NODE_AUTH_TOKEN: ${{ secrets.NPM_ACCESS_TOKEN }}
         run: pnpm publish --provenance --access=public --no-git-checks
 
-      - name: Create tarball for release
+      - name: Create a tarball for the GitHub release
         run: pnpm pack
 
       - name: Draft release on GitHub
