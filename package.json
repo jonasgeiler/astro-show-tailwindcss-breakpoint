@@ -18,7 +18,7 @@
     "unsafe-fix": "biome check --fix --unsafe",
     "build": "tsc",
     "version": "node --input-type=module --eval=\"import f from 'node:fs/promises';const j=JSON.parse(await f.readFile('jsr.json','utf8'));j.version=process.env.npm_package_version||j.version;await f.writeFile('jsr.json',JSON.stringify(j,null,2)+'\\n','utf8');console.log('Updated jsr.json for version',j.version)\" && git add jsr.json",
-    "prepublish": "pnpm run build"
+    "prepack": "pnpm run build"
   },
   "engines": {
     "node": "^18.17.1 || ^20.3.0 || >=22.0.0"
