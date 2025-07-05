@@ -10,8 +10,8 @@ jobs:
     name: Check
     uses: ./.github/workflows/check.yaml
 
-  npm-release:
-    name: npm Release
+  release:
+    name: Release
     needs: check
 
     runs-on: ubuntu-latest
