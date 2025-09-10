@@ -30,7 +30,7 @@
   "devDependencies": {
     "@biomejs/biome": "1.9.4",
     "@types/node": "18.19.86",
-    "astro": "5.6.1",
+    "astro": "5.13.2",
     "typescript": "5.8.3"
   },
   "type": "module",
