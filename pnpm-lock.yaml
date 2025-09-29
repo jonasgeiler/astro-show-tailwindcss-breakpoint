@@ -12,11 +12,11 @@ importers:
         specifier: 1.9.4
         version: 1.9.4
       '@types/node':
-        specifier: 18.19.124
-        version: 18.19.124
+        specifier: 18.19.127
+        version: 18.19.127
       astro:
         specifier: 5.13.8
-        version: 5.13.8(@types/node@18.19.124)(rollup@4.39.0)(typescript@5.8.3)
+        version: 5.13.8(@types/node@18.19.127)(rollup@4.39.0)(typescript@5.8.3)
       typescript:
         specifier: 5.8.3
         version: 5.8.3
@@ -552,8 +552,8 @@ packages:
   '@types/nlcst@2.0.3':
     resolution: {integrity: sha512-vSYNSDe6Ix3q+6Z7ri9lyWqgGhJTmzRjZRqyq15N0Z/1/UnVsno9G/N40NBijoYx2seFDIl0+B2mgAb9mezUCA==}
 
-  '@types/node@18.19.124':
-    resolution: {integrity: sha512-hY4YWZFLs3ku6D2Gqo3RchTd9VRCcrjqp/I0mmohYeUVA5Y8eCXKJEasHxLAJVZRJuQogfd1GiJ9lgogBgKeuQ==}
+  '@types/node@18.19.127':
+    resolution: {integrity: sha512-gSjxjrnKXML/yo0BO099uPixMqfpJU0TKYjpfLU7TrtA2WWDki412Np/RSTPRil1saKBhvVVKzVx/p/6p94nVA==}
 
   '@types/unist@3.0.3':
     resolution: {integrity: sha512-ko/gIFJRv177XgZsZcBwnqJN5x/Gien8qNOn0D5bQU/zAzVf9Zt3BlcUiLqhV9y4ARk0GbT3tnUiPNgnTXzc/Q==}
@@ -1908,7 +1908,7 @@ snapshots:
 
   '@types/fontkit@2.0.8':
     dependencies:
-      '@types/node': 18.19.124
+      '@types/node': 18.19.127
 
   '@types/hast@3.0.4':
     dependencies:
@@ -1924,7 +1924,7 @@ snapshots:
     dependencies:
       '@types/unist': 3.0.3
 
-  '@types/node@18.19.124':
+  '@types/node@18.19.127':
     dependencies:
       undici-types: 5.26.5
 
@@ -1955,7 +1955,7 @@ snapshots:
 
   array-iterate@2.0.1: {}
 
-  astro@5.13.8(@types/node@18.19.124)(rollup@4.39.0)(typescript@5.8.3):
+  astro@5.13.8(@types/node@18.19.127)(rollup@4.39.0)(typescript@5.8.3):
     dependencies:
       '@astrojs/compiler': 2.12.2
       '@astrojs/internal-helpers': 0.7.2
@@ -2011,8 +2011,8 @@ snapshots:
       unist-util-visit: 5.0.0
       unstorage: 1.17.1
       vfile: 6.0.3
-      vite: 6.3.6(@types/node@18.19.124)
-      vitefu: 1.1.1(vite@6.3.6(@types/node@18.19.124))
+      vite: 6.3.6(@types/node@18.19.127)
+      vitefu: 1.1.1(vite@6.3.6(@types/node@18.19.127))
       xxhash-wasm: 1.1.0
       yargs-parser: 21.1.1
       yocto-spinner: 0.2.3
@@ -3135,7 +3135,7 @@ snapshots:
       '@types/unist': 3.0.3
       vfile-message: 4.0.2
 
-  vite@6.3.6(@types/node@18.19.124):
+  vite@6.3.6(@types/node@18.19.127):
     dependencies:
       esbuild: 0.25.2
       fdir: 6.5.0(picomatch@4.0.3)
@@ -3144,12 +3144,12 @@ snapshots:
       rollup: 4.39.0
       tinyglobby: 0.2.14
     optionalDependencies:
-      '@types/node': 18.19.124
+      '@types/node': 18.19.127
       fsevents: 2.3.3
 
-  vitefu@1.1.1(vite@6.3.6(@types/node@18.19.124)):
+  vitefu@1.1.1(vite@6.3.6(@types/node@18.19.127)):
     optionalDependencies:
-      vite: 6.3.6(@types/node@18.19.124)
+      vite: 6.3.6(@types/node@18.19.127)
 
   web-namespaces@2.0.1: {}
 
