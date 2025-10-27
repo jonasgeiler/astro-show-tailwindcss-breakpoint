@@ -192,7 +192,7 @@ jobs:
         if: |
           github.event_name == 'workflow_dispatch' ||
           steps.changed-files.outputs.pnpm_any_changed == 'true'
-        uses: actions/setup-node@cdca7365b2dadb8aad0a33bc7601856ffabcc48e # v4.3.0
+        uses: actions/setup-node@2028fbc5c25fe9cf00d9f06a71cc4710d4507903 # v6.0.0
         with:
           node-version: 18
           cache: pnpm
