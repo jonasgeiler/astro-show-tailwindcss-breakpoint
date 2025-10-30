@@ -10,14 +10,15 @@
   "repository": "github:jonasgeiler/astro-show-tailwindcss-breakpoint",
   "scripts": {
     "prepare": "git config core.hooksPath .githooks",
-    "dev": "tsc --watch",
+    "dev": "pnpm run build --watch",
     "check": "pnpm run '/^check:.*/'",
     "check:biome": "biome check",
     "check:tsc": "tsc --noEmit",
     "fix": "biome check --fix",
     "unsafe-fix": "biome check --fix --unsafe",
+    "prebuild": "node --eval='require(`fs`).rmSync(`dist`,{recursive:true,force:true})'",
     "build": "tsc",
-    "version": "node --input-type=module --eval=\"import f from 'node:fs/promises';const j=JSON.parse(await f.readFile('jsr.json','utf8'));j.version=process.env.npm_package_version||j.version;await f.writeFile('jsr.json',JSON.stringify(j,null,2)+'\\n','utf8');console.log('Updated jsr.json for version',j.version)\" && git add jsr.json",
+    "version": "node --eval='const f=`jsr.json`,v=process.env.npm_package_version,s=require(`fs`);s.writeFileSync(f,JSON.stringify({...JSON.parse(s.readFileSync(f,`utf8`)),version:v},null,2)+`\\n`);console.log(`Updated ${f} for v${v}`)' && git add jsr.json",
     "prepack": "pnpm run build"
   },
   "engines": {
