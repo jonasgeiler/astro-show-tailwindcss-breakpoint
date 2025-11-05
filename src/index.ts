@@ -135,6 +135,27 @@ function generateIcon(breakpoints: Record<string, string | number>) {
 }
 
 /**
+ * Options for the `showTailwindCSSBreakpoint` Astro integration.
+ */
+export interface ShowTailwindCSSBreakpointOptions {
+	/**
+	 * Define the Tailwind CSS breakpoints to use.
+	 * Key is the name of the breakpoint, value is the size of the breakpoint.
+	 * If the value is a number, it will be converted to a string with
+	 * the suffix "px".
+	 * Make sure that all values are in the same unit (px, rem, em, etc.).
+	 *
+	 * By default, the breakpoints are:
+	 * - `sm`: `"40rem"` (640px with a root font size of 16px)
+	 * - `md`: `"48rem"` (768px with a root font size of 16px)
+	 * - `lg`: `"64rem"` (1024px with a root font size of 16px)
+	 * - `xl`: `"80rem"` (1280px with a root font size of 16px)
+	 * - `2xl`: `"96rem"` (1536px with a root font size of 16px)
+	 */
+	breakpoints?: Record<string, string | number>;
+}
+
+/**
  * An Astro integration that adds a dev toolbar app to show the current
  * Tailwind CSS breakpoint.
  *
@@ -142,23 +163,7 @@ function generateIcon(breakpoints: Record<string, string | number>) {
  * @returns The integration.
  */
 export default function showTailwindCSSBreakpoint(
-	options: {
-		/**
-		 * Define the Tailwind CSS breakpoints to use.
-		 * Key is the name of the breakpoint, value is the size of the breakpoint.
-		 * If the value is a number, it will be converted to a string with
-		 * the suffix "px".
-		 * Make sure that all values are in the same unit (px, rem, em, etc.).
-		 *
-		 * By default, the breakpoints are:
-		 * - `sm`: `"40rem"` (640px with a root font size of 16px)
-		 * - `md`: `"48rem"` (768px with a root font size of 16px)
-		 * - `lg`: `"64rem"` (1024px with a root font size of 16px)
-		 * - `xl`: `"80rem"` (1280px with a root font size of 16px)
-		 * - `2xl`: `"96rem"` (1536px with a root font size of 16px)
-		 */
-		breakpoints?: Record<string, string | number>;
-	} = {},
+	options: ShowTailwindCSSBreakpointOptions = {},
 ): AstroIntegration {
 	// API Reference: https://docs.astro.build/en/reference/integrations-reference/
 	return {
