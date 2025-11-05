@@ -1,0 +1,15 @@
+# GitHub Release Notes config
+# See: https://docs.github.com/en/repositories/releasing-projects-on-github/automatically-generated-release-notes#configuring-automatically-generated-release-notes
+
+changelog:
+  categories:
+    - title: General
+      labels:
+        - '*'
+      exclude:
+        labels:
+          - dependencies
+
+    - title: Dependencies
+      labels:
+        - dependencies
