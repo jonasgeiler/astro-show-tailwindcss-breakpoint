@@ -82,9 +82,7 @@ function generateIcon(breakpoints: Record<string, string | number>) {
 		// biome-ignore lint/style/noNonNullAssertion: Can't be null, we checked the length above.
 		const [name, value] = sortedBreakpointsArray.pop()!;
 		if (
-			Number.isNaN(
-				typeof value === "number" ? value : Number.parseFloat(value),
-			)
+			Number.isNaN(typeof value === "number" ? value : Number.parseFloat(value))
 		) {
 			throw new InvalidBreakpointValueError(name, value);
 		}
@@ -103,7 +101,6 @@ function generateIcon(breakpoints: Record<string, string | number>) {
 	}
 
 	return (
-		// biome-ignore lint/style/useTemplate: Easier to read...
 		'<svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" aria-hidden="true" viewBox="-10 -10 20 20">' +
 		"<style>" +
 		"text{" +
@@ -182,9 +179,7 @@ export default function showTailwindCSSBreakpoint(
 					id: "tailwindcss-breakpoint",
 					name: "Tailwind CSS Breakpoint",
 					icon: generateIcon(breakpoints),
-					entrypoint: fileURLToPath(
-						new URL("./app.js", import.meta.url),
-					),
+					entrypoint: fileURLToPath(new URL("./app.js", import.meta.url)),
 				});
 			},
 		},
