@@ -122,6 +122,7 @@ function generateIcon(breakpoints: Record<string, string | number>) {
 			)
 			.join("") +
 		"</style>" +
+		// biome-ignore lint/style/noNonNullAssertion: Can't be null, we checked the length above.
 		`<text id="_" lengthAdjust="spacingAndGlyphs" textLength="20">&lt;${sortedBreakpointsArray[0]![0]}</text>` +
 		sortedBreakpointsArray
 			.map(
