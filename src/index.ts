@@ -80,7 +80,7 @@ function generateIcon(breakpoints: Record<string, string | number>) {
 		// it will not be caught. That's why we check here.
 
 		// biome-ignore lint/style/noNonNullAssertion: Can't be null, we checked the length above.
-		const [name, value] = sortedBreakpointsArray.pop()!;
+		const [name, value] = sortedBreakpointsArray[0]!;
 		if (
 			Number.isNaN(typeof value === "number" ? value : Number.parseFloat(value))
 		) {
@@ -122,7 +122,7 @@ function generateIcon(breakpoints: Record<string, string | number>) {
 			)
 			.join("") +
 		"</style>" +
-		`<text id="_" lengthAdjust="spacingAndGlyphs" textLength="20">&lt;${sortedBreakpointsArray[0]?.[0] || "*"}</text>` +
+		`<text id="_" lengthAdjust="spacingAndGlyphs" textLength="20">&lt;${sortedBreakpointsArray[0]![0]}</text>` +
 		sortedBreakpointsArray
 			.map(
 				([name], index) =>
