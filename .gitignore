@@ -33,3 +33,5 @@ esbuild-why-*
 
 # Scribble Files
 test.[jt]s
+test.[cm][jt]s
+test.sh

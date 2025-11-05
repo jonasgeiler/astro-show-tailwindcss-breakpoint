@@ -7,15 +7,16 @@
   "license": "MIT",
   "author": "Jonas Geiler <npm@jonasgeiler.com> (https://jonasgeiler.com)",
   "funding": "https://github.com/sponsors/jonasgeiler",
-  "repository": "github:jonasgeiler/astro-show-tailwindcss-breakpoint",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/jonasgeiler/astro-show-tailwindcss-breakpoint.git"
+  },
   "scripts": {
     "prepare": "git config core.hooksPath .githooks",
     "dev": "pnpm run build --watch",
-    "check": "pnpm run '/^check:.*/'",
-    "check:biome": "biome check",
-    "check:tsc": "tsc --noEmit",
+    "check": "biome check",
     "fix": "biome check --fix",
-    "unsafe-fix": "biome check --fix --unsafe",
+    "unsafe-fix": "biome check --unsafe --fix",
     "prebuild": "node --eval='require(`fs`).rmSync(`dist`,{recursive:true,force:true})'",
     "build": "tsc",
     "version": "node --eval='const f=`jsr.json`,v=process.env.npm_package_version,s=require(`fs`);s.writeFileSync(f,JSON.stringify({...JSON.parse(s.readFileSync(f,`utf8`)),version:v},null,2)+`\\n`);console.log(`Updated ${f} for v${v}`)' && git add jsr.json",
