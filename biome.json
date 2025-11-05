@@ -1,5 +1,5 @@
 {
-  "$schema": "https://biomejs.dev/schemas/1.9.4/schema.json",
+  "$schema": "./node_modules/@biomejs/biome/configuration_schema.json",
   "vcs": {
     "enabled": true,
     "clientKind": "git",
@@ -7,20 +7,22 @@
     "defaultBranch": "main"
   },
   "files": {
-    "ignoreUnknown": false,
-    "ignore": []
+    "ignoreUnknown": false
   },
   "formatter": {
     "enabled": true,
     "useEditorconfig": true,
-    "ignore": ["**/package.json", "**/jsr.json", "tsconfig.json"]
-  },
-  "organizeImports": {
-    "enabled": true
+    "includes": ["**", "!package.json", "!jsr.json", "!tsconfig.json"]
   },
   "linter": {
     "enabled": true,
     "rules": {
+      "recommended": true
+    }
+  },
+  "assist": {
+    "enabled": true,
+    "actions": {
       "recommended": true
     }
   }
