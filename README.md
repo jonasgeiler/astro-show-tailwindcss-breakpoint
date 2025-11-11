@@ -42,9 +42,9 @@ This will install the package and make the appropriate changes to your
 ```bash
 npx astro add astro-show-tailwindcss-breakpoint
 ```
-If you prefer to install the integration manually instead, complete the
+If you prefer to add the integration manually instead, complete the
 following two steps:
-1. Install the integration to your project’s dependencies using your preferred
+1. Install the package to your project’s dependencies using your preferred
    package manager.  
    If you’re using npm or aren’t sure, run this in the terminal:
    ```bash
