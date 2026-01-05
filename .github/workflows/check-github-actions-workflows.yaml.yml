@@ -35,7 +35,7 @@ jobs:
       - name: Set up actionlint
         env:
           # renovate: datasource=github-releases depName=rhysd/actionlint
-          ACTIONLINT_VERSION: v1.7.9
+          ACTIONLINT_VERSION: v1.7.10
           # renovate: datasource=github-releases depName=koalaman/shellcheck
           SHELLCHECK_VERSION: v0.11.0
         run: |
