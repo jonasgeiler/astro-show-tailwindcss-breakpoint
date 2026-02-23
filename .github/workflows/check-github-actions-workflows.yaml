@@ -24,7 +24,7 @@ jobs:
     runs-on: ubuntu-latest
     defaults:
       run:
-        shell: bash
+        shell: bash --noprofile --norc -euo pipefail {0}
 
     steps:
       - name: Check out repository
@@ -39,7 +39,7 @@ jobs:
           # renovate: datasource=github-releases depName=koalaman/shellcheck
           SHELLCHECK_VERSION: v0.11.0
         run: |
-          set -o nounset -o xtrace
+          IFS=$' \n\t'; set -x
 
           # Download, extract and set mode for shellcheck, which is used by actionlint.
           wget -q "https://github.com/koalaman/shellcheck/releases/download/${SHELLCHECK_VERSION}/shellcheck-${SHELLCHECK_VERSION}.linux.x86_64.tar.xz" \
