@@ -49,17 +49,22 @@ jobs:
       - name: Publish package to JSR
         run: pnpx jsr publish
 
-      - name: Replace GitHub-flavored Markdown alerts with standard Markdown
-        run: sed -i 's/^> *\[\!\([a-zA-Z]\)\([a-zA-Z]*\)\] */> **\U\1\L\2**  /g' ./*.md
-        # Basically replaces:
-        # > [!NOTE]
-        # with:
-        # > **Note**
+        run: |
+          IFS=$' \n\t'; set -x
+
+          # Replace:
+          # > [!NOTE]
+          # with:
+          # > **Note**
+          sed -i 's/^> *\[\!\([a-zA-Z]\)\([a-zA-Z]*\)\] */> **\U\1\L\2**  /g' ./*.md
 
       - name: Publish package to npm
         env:
           TAG: ${{ env.IS_PRERELEASE == 'true' && 'next' || 'latest' }}
-        run: pnpm publish --access=public --no-git-checks --tag="${TAG}"
+        run: |
+          IFS=$' \n\t'; set -x
+
+          pnpm publish --access=public --no-git-checks --tag="${TAG}"
 
       - name: Create package tarball
         run: pnpm pack
