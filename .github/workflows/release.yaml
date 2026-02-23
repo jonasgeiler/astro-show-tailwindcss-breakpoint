@@ -49,6 +49,7 @@ jobs:
       - name: Publish package to JSR
         run: pnpx jsr publish
 
+      - name: Replace GitHub-flavored Markdown alerts with standard Markdown
         run: |
           IFS=$' \n\t'; set -x
 
