@@ -6,22 +6,24 @@ on:
       - main
       - 'renovate/**'
     paths:
-      - '**.sh'
+      - '**.ash'
       - '**.bash'
-      - '**.mksh'
       - '**.bats'
-      - '**.zsh'
+      - '**.dash'
+      - '**.ksh'
+      - '**.sh'
       - '.githooks/*'
 
   pull_request:
     branches:
       - main
     paths:
-      - '**.sh'
+      - '**.ash'
       - '**.bash'
-      - '**.mksh'
       - '**.bats'
-      - '**.zsh'
+      - '**.dash'
+      - '**.ksh'
+      - '**.sh'
       - '.githooks/*'
 
   workflow_dispatch:
@@ -72,5 +74,5 @@ jobs:
 
           # We have to use gcc format and disable colors for the problem matcher.
           ./shellcheck --norc --enable=all --format=gcc --color=never \
-            ./**/*.{sh,bash,mksh,bats,zsh} \
+            ./**/*.{ash,bash,bats,dash,ksh,sh} \
             .githooks/*
