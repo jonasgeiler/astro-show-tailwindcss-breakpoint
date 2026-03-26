@@ -22,7 +22,7 @@ jobs:
     runs-on: ubuntu-latest
     defaults:
       run:
-        shell: bash --noprofile --norc -euo pipefail {0}
+        shell: bash --noprofile --norc -euxo pipefail {0}
 
     permissions:
       id-token: write # Required for OIDC.
@@ -51,8 +51,6 @@ jobs:
 
       - name: Replace GitHub-flavored Markdown alerts with standard Markdown
         run: |
-          IFS=$' \n\t'; set -x
-
           # Replace:
           # > [!NOTE]
           # with:
@@ -62,10 +60,7 @@ jobs:
       - name: Publish package to npm
         env:
           TAG: ${{ env.IS_PRERELEASE == 'true' && 'next' || 'latest' }}
-        run: |
-          IFS=$' \n\t'; set -x
-
-          pnpm publish --access=public --no-git-checks --tag="${TAG}"
+        run: pnpm publish --access=public --no-git-checks --tag="${TAG}"
 
       - name: Create package tarball
         run: pnpm pack

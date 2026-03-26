@@ -36,7 +36,7 @@ jobs:
     runs-on: ubuntu-latest
     defaults:
       run:
-        shell: bash --noprofile --norc -euo pipefail {0}
+        shell: bash --noprofile --norc -euxo pipefail {0}
 
     steps:
       - name: Check out repository
@@ -51,8 +51,6 @@ jobs:
           # renovate: datasource=github-releases depName=lumaxis/shellcheck-problem-matchers
           SHELLCHECK_PROBLEM_MATCHERS_VERSION: v2.1.0
         run: |
-          IFS=$' \n\t'; set -x
-
           # Download, extract and set mode for shellcheck.
           wget -q "https://github.com/koalaman/shellcheck/releases/download/${SHELLCHECK_VERSION}/shellcheck-${SHELLCHECK_VERSION}.linux.x86_64.tar.xz" \
             -O shellcheck.tar.xz
@@ -67,8 +65,6 @@ jobs:
 
       - name: Run shellcheck
         run: |
-          IFS=$' \n\t'; set -x
-
           # Support advanced globbing patterns.
           shopt -s nullglob globstar
 
