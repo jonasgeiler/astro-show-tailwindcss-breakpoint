@@ -49,7 +49,7 @@ jobs:
           # renovate: datasource=github-releases depName=koalaman/shellcheck
           SHELLCHECK_VERSION: v0.11.0
           # renovate: datasource=github-releases depName=lumaxis/shellcheck-problem-matchers
-          SHELLCHECK_PROBLEM_MATCHERS_VERSION: v2.1.0
+          SHELLCHECK_PROBLEM_MATCHERS_VERSION: v2.3.1
         run: |
           # Download, extract and set mode for shellcheck.
           wget -q "https://github.com/koalaman/shellcheck/releases/download/${SHELLCHECK_VERSION}/shellcheck-${SHELLCHECK_VERSION}.linux.x86_64.tar.xz" \
